@@ -1,6 +1,10 @@
+const apiUrl = 'https://anapioficeandfire.com/api/books'
+
 function fetchBooks() {
   // To pass the tests, don't forget to return your fetch!
-  
+  fetch(apiUrl)
+    .then(r => r.json())
+    .then(data => renderBooks(data))
 }
 
 function renderBooks(books) {
